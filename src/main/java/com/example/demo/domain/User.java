@@ -17,8 +17,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+
     private String username;
     private String password;
+
+    public String getUsername() {
+        return username;
+    }
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<Role> roles = new ArrayList<>();
